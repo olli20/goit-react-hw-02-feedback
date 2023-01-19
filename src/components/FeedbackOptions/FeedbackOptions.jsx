@@ -24,5 +24,5 @@ export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
     handleVote: PropTypes.func.isRequired,
-    // options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 }

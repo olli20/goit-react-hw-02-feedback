@@ -1,0 +1,14 @@
+[
+    {
+      "name": "good",
+      "icon": "😀"
+    },
+    {
+      "name": "neutral",
+      "icon": "😏"
+    },
+    {
+      "name": "bad",
+      "icon": "😒"
+    }
+]
