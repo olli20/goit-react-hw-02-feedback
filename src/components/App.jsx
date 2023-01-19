@@ -6,6 +6,8 @@ import Notification from './Notification/Notification'
 
 import styles from './app.module.scss';
 
+const voteOptions = ["good", "neutral", "bad"];
+
 class App extends Component {
 
   state = {
@@ -14,9 +16,11 @@ class App extends Component {
     bad: 0,
   }
 
-  handleVote(voteType) {
+  handleVote = (voteType) => {
     this.setState(prevState => {
-      return { [voteType]: prevState[voteType] + 1 };
+      return {
+        [voteType]: prevState[voteType] + 1
+      };
     });
   }
 
@@ -31,7 +35,7 @@ class App extends Component {
       return 0;
     }
     const { good } = this.state;
-    return (Math.round(good / total * 100));
+    return Math.round(good / total * 100);
   }
   
   render() {
@@ -40,23 +44,21 @@ class App extends Component {
     const positivePercentage = this.countPositiveFeedbackPercentage();
 
     return (
-      <div className={styles.app}>
-        <FeedbackOptions
-          onGoodClick={() => this.handleVote('good')}
-          onNeutralClick={() => this.handleVote('neutral')}
-          onBadClick={() => this.handleVote('bad')}
-        />
-      {total ? 
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={total}
-          positivePercentage={positivePercentage}> 
-        </Statistics>
-        :
-          <Notification message="There is no feedback" />}
-    </div>
+      <div className={styles.app}>       
+        <FeedbackOptions options={voteOptions} handleVote={this.handleVote} />
+        
+        {total ? 
+          <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positivePercentage={positivePercentage}> 
+          </Statistics>
+          :
+          <Notification message="There is no feedback" />
+        }
+      </div>
     )
   }
 };
