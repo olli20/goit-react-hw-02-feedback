@@ -6,7 +6,20 @@ import Notification from './Notification/Notification'
 
 import styles from './app.module.scss';
 
-const voteOptions = ["good", "neutral", "bad"];
+const voteOptions = [
+    {
+      name: "good",
+      icon: "😀",
+    },
+    {
+      name: "neutral",
+      icon: "😏",
+    },
+    {
+      name: "bad",
+      icon: "😒",
+    },
+];
 
 class App extends Component {
 

@@ -6,10 +6,11 @@ import styles from './feedback-options.module.scss';
 
 const FeedbackOptions = ({ options, handleVote }) => {
 
-
-  const buttons = options.map(name =>
-    <p key={name}><Button onClick={() => handleVote(name)} type="button" color={name}>{name}</Button></p>);
-
+  const buttons = options.map(button => {
+    const { name, icon } = button;
+    return <p key={name}><Button onClick={() => handleVote(name)} type="button" name={name}>{icon} {name}</Button></p>
+  });
+    
   return (
     <Section title="Voting">
       <div className={styles.btnContainer}>
@@ -23,5 +24,5 @@ export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
     handleVote: PropTypes.func.isRequired,
-    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    // options: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
