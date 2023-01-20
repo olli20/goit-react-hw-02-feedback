@@ -1,14 +1,14 @@
 [
     {
       "name": "good",
-      "icon": "TbMoodHappy"
+      "icon": "RiEmotionFill"
     },
     {
       "name": "neutral",
-      "icon": "TbMoodEmpty"
+      "icon": "RiEmotionNormalFill"
     },
     {
       "name": "bad",
-      "icon": "TbMoodSad"
+      "icon": "RiEmotionUnhappyFill"
     }
 ]

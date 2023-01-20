@@ -1,7 +1,4 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
-import * as TablerIcons from "react-icons/tb";
 
 import Button from '../Button/Button';
 import Section from '../Section/Section';
@@ -11,12 +8,17 @@ const FeedbackOptions = ({ options, handleVote }) => {
 
   const buttons = options.map(button => {
     const { name, icon } = button;
-    const iconComponent = React.createElement(TablerIcons[icon]);
-    return <Button key={name} onClick={() => handleVote(name)} type="button" name={name}>{iconComponent}{name}</Button>
+    return <Button
+      key={name}
+      icon={icon}
+      onClick={() => handleVote(name)}
+      type="button"
+      name={name}
+    >{name}</Button>;
   });
     
   return (
-    <Section title="Voting">
+    <Section title="Feedback">
       <div className={styles.btnContainer}>
          {buttons}
       </div>
@@ -25,6 +27,10 @@ const FeedbackOptions = ({ options, handleVote }) => {
 }
 
 export default FeedbackOptions;
+
+FeedbackOptions.defaultProps = {
+    type: "submit",
+}
 
 FeedbackOptions.propTypes = {
     handleVote: PropTypes.func.isRequired,

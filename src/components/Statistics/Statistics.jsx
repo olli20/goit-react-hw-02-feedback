@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 
 import Section from '../Section/Section';
 
-// import styles from './statistics.module.scss';
+import styles from './statistics.module.scss';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
         <Section title="Results">
-            <p>Good: {good}</p>
-            <p>Neutral: {neutral}</p>
-            <p>Bad: {bad}</p>
-            <p>Total: {total}</p>
-            <p>Positive feedback: {positivePercentage}%</p>
+            <p className={styles.label}>Good: {good}</p>
+            <p className={styles.label}>Neutral: {neutral}</p>
+            <p className={styles.label}>Bad: {bad}</p>
+            <p className={styles.label}>Total: {total}</p>
+            <p className={styles.label}>Positive feedback: {positivePercentage}%</p>
         </Section>
     );
 }

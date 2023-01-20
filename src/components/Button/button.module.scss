@@ -2,37 +2,56 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    padding: 10px 20px;
+    gap: 7px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 130px;
+    padding: 12px 15px;
     background-color: white;
-    font-size: 16px;
-    font-weight: 600;
-    border: 1px solid grey;
-    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    border-radius: 7px;
+    // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transform: scale(1);
 
     cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+                &:active {
+                    transform: scale(1.05);
+                }
+
+        transition: all .2s ease-in-out;
 }
 
 .good {
-    border: 1px solid green;
+    color: green;
 
     & > svg {
-        stroke: green;
+        fill: green;
+        font-size: 22px;
     }
 }
 
 .neutral {
-    border: 1px solid rgb(73, 154, 180);
+    color: rgb(73, 154, 180);
 
     & > svg {
-        stroke: rgb(73, 154, 180);
+        fill: rgb(73, 154, 180);
+        font-size: 22px;
     }
 }
 
 .bad {
-    border: 1px solid tomato;
+    color: tomato;
 
     & > svg {
-        stroke: tomato;
+        fill: tomato;
+        font-size: 22px;
     }
 }
