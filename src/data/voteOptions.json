@@ -1,14 +1,14 @@
 [
     {
       "name": "good",
-      "icon": "😀"
+      "icon": "TbMoodHappy"
     },
     {
       "name": "neutral",
-      "icon": "😏"
+      "icon": "TbMoodEmpty"
     },
     {
       "name": "bad",
-      "icon": "😒"
+      "icon": "TbMoodSad"
     }
 ]

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
     padding: 10px 20px;
     background-color: white;
     font-size: 16px;
@@ -14,12 +15,24 @@
 
 .good {
     border: 1px solid green;
+
+    & > svg {
+        stroke: green;
+    }
 }
 
 .neutral {
     border: 1px solid rgb(73, 154, 180);
+
+    & > svg {
+        stroke: rgb(73, 154, 180);
+    }
 }
 
 .bad {
     border: 1px solid tomato;
+
+    & > svg {
+        stroke: tomato;
+    }
 }

@@ -23,7 +23,7 @@ class App extends Component {
       };
     });
   }
-
+  
   countTotalFeedback() {
     const { good, neutral, bad } = this.state;
     return (good + neutral + bad);
@@ -53,8 +53,8 @@ class App extends Component {
               neutral={neutral}
               bad={bad}
               total={total}
-              positivePercentage={positivePercentage}> 
-          </Statistics>
+              positivePercentage={positivePercentage} 
+          />
           :
           <Notification message="There is no feedback" />
         }
