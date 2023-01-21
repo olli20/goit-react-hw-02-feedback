@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-import Button from '../Button/Button';
-import Section from '../Section/Section';
+import Button from '../Button';
+import Section from '../Section';
 import styles from './feedback-options.module.scss';
 
 const FeedbackOptions = ({ options, handleVote }) => {
