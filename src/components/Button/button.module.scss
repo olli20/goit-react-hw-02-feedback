@@ -3,20 +3,18 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+
     width: 110px;
+    margin-bottom: 12px;
     padding: 10px 12px;
     background-color: white;
     font-size: 16px;
     font-weight: 500;
     border: none;
     border-radius: 7px;
-    // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 6px 14px, rgba(0, 0, 0, 0.23) 0px 4px 4px;
     transform: scale(1);
     transition: all .2s ease-in-out;
-
     cursor: pointer;
 
     &:hover, 

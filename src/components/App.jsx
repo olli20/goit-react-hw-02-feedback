@@ -3,6 +3,7 @@ import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
 import Notification from './Notification';
 import voteOptions from '../data/vote-options.json';
+
 import styles from './app.module.scss';
 
 class App extends Component {
