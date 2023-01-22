@@ -6,7 +6,6 @@ import voteOptions from '../data/vote-options.json';
 import styles from './app.module.scss';
 
 class App extends Component {
-
   state = {
     good: 0,
     neutral: 0,

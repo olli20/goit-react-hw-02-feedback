@@ -6,7 +6,7 @@ import styles from './statistics.module.scss';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
-        <Section title="Results">
+        <Section title="Statictics">
             <p className={styles.label}>Good: {good}</p>
             <p className={styles.label}>Neutral: {neutral}</p>
             <p className={styles.label}>Bad: {bad}</p>

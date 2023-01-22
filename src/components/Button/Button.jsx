@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import * as RemixIcon from "react-icons/ri";
 
 import styles from './button.module.scss';
@@ -23,5 +22,8 @@ Button.propTypes = {
     type: PropTypes.oneOf(["submit", "button", "reset"]),
     name: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired,
+    children: PropTypes.PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.node
+    ]).isRequired,
 }

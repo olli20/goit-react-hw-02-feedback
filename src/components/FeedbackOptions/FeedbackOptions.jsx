@@ -18,7 +18,7 @@ const FeedbackOptions = ({ options, handleVote }) => {
   });
     
   return (
-    <Section title="Feedback">
+    <Section title="Please leave feedback">
       <div className={styles.btnContainer}>
          {buttons}
       </div>
@@ -30,9 +30,13 @@ export default FeedbackOptions;
 
 FeedbackOptions.defaultProps = {
     type: "submit",
+    options: [],
 }
 
 FeedbackOptions.propTypes = {
     handleVote: PropTypes.func.isRequired,
-    options: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+    options: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      icon: PropTypes.string,
+    })).isRequired,
 }
